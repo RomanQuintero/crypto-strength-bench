@@ -1,0 +1,58 @@
+{
+  "hardware": {
+    "cpu": "AMD Ryzen 7 9800X3D 8-Core Processor           ",
+    "logicalProcessors": 16,
+    "platform": "win32",
+    "release": "10.0.26200",
+    "node": "v24.21.0",
+    "gpuDetected": "NVIDIA GeForce RTX 3090 (unused; CUDA toolkit not found)"
+  },
+  "measurements": [
+    {
+      "algorithm": "SHA-256",
+      "backend": "CPU · Node native Web Crypto · sequential candidate loop",
+      "rounds": null,
+      "length": 12,
+      "requestedIterations": 100000,
+      "iterations": 100000,
+      "elapsed": 1.4878040000000001,
+      "rate": 67213.15442087801,
+      "warmup": 256,
+      "samples": [
+        49297.47763460043,
+        61802.39713555859,
+        68339.5933727845,
+        72228.719861904,
+        62082.306608661565,
+        65994.79565041499,
+        73975.63735676378,
+        74851.1918561904,
+        76247.05371439173
+      ],
+      "checksum": 136,
+      "date": "2026-10-02T11:22:47.156Z",
+      "capped": false
+    },
+    {
+      "algorithm": "PBKDF2",
+      "backend": "CPU · Node native Web Crypto · sequential candidate loop",
+      "rounds": 10000,
+      "length": 12,
+      "requestedIterations": 1000,
+      "iterations": 1000,
+      "elapsed": 1.0483019999999996,
+      "rate": 953.9235830896062,
+      "warmup": 8,
+      "samples": [
+        952.6100324125565,
+        954.0145887910918,
+        954.5350197421703,
+        965.1666529130416,
+        943.550220932284
+      ],
+      "checksum": 113,
+      "date": "2026-10-02T11:22:48.215Z",
+      "capped": false
+    }
+  ]
+}

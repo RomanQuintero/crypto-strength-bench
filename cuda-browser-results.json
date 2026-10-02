@@ -1,0 +1,136 @@
+{
+  "measurements": [
+    {
+      "algorithm": "SHA-256",
+      "backend": "CPU · native Web Crypto · one worker",
+      "rounds": null,
+      "length": 12,
+      "requestedIterations": 1000000,
+      "iterations": 1000000,
+      "elapsed": 3.43,
+      "rate": 291545.1895043732,
+      "warmup": 256,
+      "samples": [
+        303131.24583309994,
+        289806.7954668098,
+        268551.23675383005,
+        329341.3173554739,
+        300666.6666666667,
+        284666.6666666667,
+        284365.78171091445,
+        314913.4487443926,
+        300000,
+        271152.56495400367,
+        325333.3333333334,
+        281437.1257540835,
+        291333.3333333334,
+        278383.57920680376,
+        303797.46836649417,
+        291611.1850807652,
+        264666.6666666667,
+        314703.9254886087,
+        284287.61650567746,
+        254497.001996141,
+        303333.3333333334,
+        277814.7901371487
+      ],
+      "checksum": 143,
+      "date": "2026-10-02T12:27:56.726Z",
+      "capped": false,
+      "backendId": "cpu",
+      "environment": {
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+        "logicalProcessors": 16
+      }
+    },
+    {
+      "algorithm": "SHA-256",
+      "backend": "GPU · CUDA · NVIDIA GeForce RTX 3090",
+      "device": "NVIDIA GeForce RTX 3090",
+      "length": 12,
+      "requestedIterations": 1000000,
+      "iterations": 1000000,
+      "elapsed": 0.0032147,
+      "rate": 311071017.513,
+      "kernelElapsed": 0.000729440003633,
+      "kernelRate": 1370914667.44,
+      "warmup": 786432,
+      "checksum": 143,
+      "selftest": true,
+      "capped": false,
+      "digestSamples": [
+        {
+          "index": 0,
+          "digest": "f24abc34b13fade76e805799f71187da6cd90b9cac373ae65ed57f143bd664e5"
+        },
+        {
+          "index": 500000,
+          "digest": "f07e3007aaa79d0f26d7474b67352dd8c4c5afb218f2ab55c7f50cc43d439c3c"
+        },
+        {
+          "index": 999999,
+          "digest": "d48006eb3f3b86d195c06d5b75f500411f77d407b8570267b7030ad027b0caa4"
+        }
+      ],
+      "backendId": "cuda",
+      "rounds": null,
+      "requestElapsed": 0.13371720000000278,
+      "requestRate": 7478469.486348646,
+      "verified": true,
+      "date": "2026-10-02T12:27:56.863Z",
+      "timing": "Steady-state candidate generation + full SHA-256 + digest D2H copies + CPU checksum. Startup, self-tests, allocation and 3 warm-up batches excluded.",
+      "kernelTiming": "CUDA events on default stream: candidate generation + full SHA-256 + global digest writes; no host copies.",
+      "requestTiming": "Process spawn, CUDA context initialization, known-vector self-tests, allocations, warm-up, measured work, cleanup and sampled CPU digest verification.",
+      "browserElapsed": 0.137,
+      "environment": {
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+        "logicalProcessors": 16
+      }
+    },
+    {
+      "algorithm": "SHA-256",
+      "backend": "GPU · CUDA · NVIDIA GeForce RTX 3090",
+      "device": "NVIDIA GeForce RTX 3090",
+      "length": 12,
+      "requestedIterations": 100000000,
+      "iterations": 100000000,
+      "elapsed": 0.2932668,
+      "rate": 340986432.832,
+      "kernelElapsed": 0.072946624063,
+      "kernelRate": 1370865359.22,
+      "warmup": 786432,
+      "checksum": 137,
+      "selftest": true,
+      "capped": false,
+      "digestSamples": [
+        {
+          "index": 0,
+          "digest": "f24abc34b13fade76e805799f71187da6cd90b9cac373ae65ed57f143bd664e5"
+        },
+        {
+          "index": 50000000,
+          "digest": "cbeb3a0195a071a12ef3be6e17013d3706d41a4f4ab30ef55b716b7d57983115"
+        },
+        {
+          "index": 99999999,
+          "digest": "6dff3acf6916f1668d2edbfd120ddc4e12fa28b8b795aae20263210238e10b68"
+        }
+      ],
+      "backendId": "cuda",
+      "rounds": null,
+      "requestElapsed": 0.40701640000000044,
+      "requestRate": 245690345.6470056,
+      "verified": true,
+      "date": "2026-10-02T12:27:57.389Z",
+      "timing": "Steady-state candidate generation + full SHA-256 + digest D2H copies + CPU checksum. Startup, self-tests, allocation and 3 warm-up batches excluded.",
+      "kernelTiming": "CUDA events on default stream: candidate generation + full SHA-256 + global digest writes; no host copies.",
+      "requestTiming": "Process spawn, CUDA context initialization, known-vector self-tests, allocations, warm-up, measured work, cleanup and sampled CPU digest verification.",
+      "browserElapsed": 0.4093999999985099,
+      "environment": {
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+        "logicalProcessors": 16
+      }
+    }
+  ],
+  "methodology": "CPU native Web Crypto loop vs CUDA steady-state with full digest copies/checksum, both excluding warm-up/startup. GPU kernel-only and complete request timings are separately recorded."
+}

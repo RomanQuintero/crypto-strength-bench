@@ -1,0 +1,74 @@
+{
+  "measurements": [
+    {
+      "algorithm": "SHA-256",
+      "backend": "CPU · native Web Crypto · one worker",
+      "rounds": null,
+      "length": 12,
+      "requestedIterations": 100000,
+      "iterations": 100000,
+      "elapsed": 0.33259999999403955,
+      "rate": 300661.4552068313,
+      "warmup": 256,
+      "samples": [
+        306666.6666666667,
+        286666.6666666667
+      ],
+      "checksum": 136,
+      "date": "2026-10-02T12:28:04.645Z",
+      "capped": false,
+      "backendId": "cpu",
+      "environment": {
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+        "logicalProcessors": 16
+      }
+    },
+    {
+      "algorithm": "PBKDF2",
+      "backend": "CPU · native Web Crypto · one worker",
+      "rounds": 10000,
+      "length": 12,
+      "requestedIterations": 5000,
+      "iterations": 5000,
+      "elapsed": 5.47260000000149,
+      "rate": 913.6425099584545,
+      "warmup": 8,
+      "samples": [
+        926.7840593269789,
+        890.4719501276629,
+        896.8609865470852,
+        905.3870529712501,
+        890.8685968819599,
+        919.5402298850574,
+        925.925925925926,
+        936.3295880084493,
+        924.2144177512808,
+        892.0606601130305,
+        907.4410163400735,
+        928.9363678395138,
+        919.1176470839998,
+        916.5902841304691,
+        908.6778736876237,
+        922.5092251049322,
+        931.9664492013571,
+        905.7971014615013,
+        910.3322712666682,
+        917.8522257979242,
+        925.925925925926,
+        907.0294784580499,
+        903.3423667630808,
+        907.4410163093976,
+        924.2144177512808
+      ],
+      "checksum": 111,
+      "date": "2026-10-02T12:28:10.777Z",
+      "capped": false,
+      "backendId": "cpu",
+      "environment": {
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+        "logicalProcessors": 16
+      }
+    }
+  ],
+  "methodology": "CPU native Web Crypto loop vs CUDA steady-state with full digest copies/checksum, both excluding warm-up/startup. GPU kernel-only and complete request timings are separately recorded."
+}

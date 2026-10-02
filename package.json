@@ -1,0 +1,7 @@
+{
+  "name": "crypto-strength-bench",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": { "start": "node server.mjs", "test": "node --test", "build": "node build.mjs", "build:cuda": "scripts\\build-cuda.cmd", "test:cuda": "node --test test/cuda.test.mjs", "bench": "node benchmark.mjs", "bench:cuda": "node benchmark-cuda.mjs" }
+}
